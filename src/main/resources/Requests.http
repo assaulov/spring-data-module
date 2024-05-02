@@ -1,0 +1,53 @@
+###
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "title": "Bla2",
+  "language": "Russian",
+  "active": true,
+  "categoryId": 1,
+  "authorsIds": [1,2]
+}
+
+###
+POST http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "id": 3,
+  "title": "Bla3",
+  "language": "English",
+  "active": true,
+  "categoryId": 1,
+  "authorsIds": [1,2]
+}
+
+###
+GET http://localhost:8080/books
+Content-Type: application/json
+
+{
+  "page": 0,
+  "size": 100
+}
+
+###
+GET http://localhost:8080/books/3
+
+###
+GET http://localhost:8080/books/getByLanguageAndCategory
+Content-Type: application/json
+
+{
+  "language": "Russian",
+  "categoryName": "Fantasy"
+}
+
+###
+DELETE http://localhost:8080/books/1
+
+
+
+
+
